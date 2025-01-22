@@ -133,7 +133,41 @@ if [ "${PROJECT}" == "ubuntu" ]; then
     ) >> config/package-lists/my.list.chroot
 else
     # Specific packages to install for ubuntu server
-    echo "ubuntu-server-rockchip" >> config/package-lists/my.list.chroot
+    (
+        echo "ubuntu-server-rockchip"
+        echo "libdrm-dev"
+        echo "libcairo-dev"
+        echo "librockchip-mpp-dev"
+        echo "libspdlog-dev cmake"
+        echo "nlohmann-json3-dev"
+        echo "gpiod"
+        echo "libgstreamer1.0-dev"
+        echo "libgstreamer-plugins-base1.0-dev"
+        echo "libgstreamer-plugins-bad1.0-dev"
+        echo "gstreamer1.0-plugins-base"
+        echo "gstreamer1.0-plugins-good"
+        echo "gstreamer1.0-plugins-bad"
+        echo "gstreamer1.0-plugins-ugly"
+        echo "gstreamer1.0-libav"
+        echo "gstreamer1.0-tools"
+        echo "gstreamer1.0-x"
+        echo "gstreamer1.0-alsa"
+        echo "gstreamer1.0-gl"
+        echo "gstreamer1.0-gtk3"
+        echo "gstreamer1.0-qt5"
+        echo "gstreamer1.0-pulseaudio"
+        echo "gstreamer1.0-rockchip1"
+        echo "gstreamer1.0-fdkaac"
+        echo "gstreamer1.0-nice"
+        echo "gstreamer1.0-omx-generic"
+        echo "gstreamer1.0-opencv"
+        echo "gstreamer1.0-plugins-bad-apps"
+        echo "gstreamer1.0-plugins-rtp"
+        echo "gstreamer1.0-pocketsphinx"
+        echo "gstreamer1.0-rtsp"
+        echo "gstreamer1.0-vaapi"
+        echo "gstreamer1.0-wpe"
+    ) >> config/package-lists/my.list.chroot
 fi
 
 # Build the rootfs
